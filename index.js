@@ -1,16 +1,16 @@
-import fs from "node:fs";
-import { findUp } from "find-up";
+import fs from 'node:fs';
+import { findUp } from 'find-up';
 
 const FILES = [
-	"VERSION",
-	"VERSION.txt",
-	"VERSION.md",
-	".VERSION",
-	"VERSION.DEV",
-	"VERSION.PROD",
-	"VERSION.LOCAL",
-	"VERSION.STAGE",
-	"VERSION.TEST",
+  'VERSION',
+  'VERSION.txt',
+  'VERSION.md',
+  '.VERSION',
+  'VERSION.DEV',
+  'VERSION.PROD',
+  'VERSION.LOCAL',
+  'VERSION.STAGE',
+  'VERSION.TEST',
 ];
 
 /**
@@ -19,8 +19,8 @@ const FILES = [
  * get VERSION file path.
  */
 async function getVersionFilePath() {
-	const path = await findUp(FILES);
-	return path;
+  const path = await findUp(FILES);
+  return path;
 }
 
 /**
@@ -29,9 +29,9 @@ async function getVersionFilePath() {
  * read VERSION file content.
  */
 export async function readVersionFile() {
-	const path = await getVersionFilePath();
-	const content = fs.readFileSync(path, "utf8").trim();
-	return content;
+  const path = await getVersionFilePath();
+  const content = fs.readFileSync(path, 'utf8').trim();
+  return content;
 }
 
 /**
@@ -40,12 +40,12 @@ export async function readVersionFile() {
  * write VERSION file content.
  */
 export async function writeVersionFile(content) {
-	try {
-		const path = await getVersionFilePath();
-		fs.writeFileSync(path, content, "utf8");
-		return true;
-	} catch (error) {
-		console.error(error);
-		return false;
-	}
+  try {
+    const path = await getVersionFilePath();
+    fs.writeFileSync(path, content, 'utf8');
+    return true;
+  } catch (error) {
+    console.error(error);
+    return false;
+  }
 }
