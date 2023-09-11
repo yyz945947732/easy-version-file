@@ -1,0 +1,40 @@
+{
+  "name": "easy-version-file",
+  "version": "1.0.0",
+  "description": "easy to read/write a VERSION file",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "xo --fix && ava && tsd"
+  },
+  "exports": "./index.js",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "keywords": [
+    "version-file",
+    "version",
+    "VERSION",
+    "latest"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yyz945947732/easy-version-file.git"
+  },
+  "author": "yyz945947732 <945947732@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yyz945947732/easy-version-file/issues"
+  },
+  "homepage": "https://github.com/yyz945947732/easy-version-file#readme",
+  "devDependencies": {
+    "ava": "^5.3.1",
+    "tsd": "^0.29.0",
+    "typescript": "^5.2.2",
+    "xo": "^0.56.0"
+  },
+  "dependencies": {
+    "find-up": "^6.3.0"
+  }
+}
